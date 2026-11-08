@@ -1,0 +1,257 @@
+/* Configurações Globais e Variáveis de Cores (Evitando Vermelho) */
+:root {
+    --bg-color: #f4f7f6;
+    --text-color: #2c3e50;
+    --white: #ffffff;
+    
+    /* Cores Customizadas por Série */
+    --color-6ano: #3498db;    /* Azul */
+    --color-7ano: #2ecc71;    /* Verde */
+    --color-8ano: #9b59b6;    /* Roxo */
+    --color-9ano: #f39c12;    /* Laranja */
+    --color-1em:  #1abc9c;    /* Ciano / Turquesa */
+    --color-2em:  #34495e;    /* Azul Escuro / Grafite */
+    --color-3em:  #16a085;    /* Esmeralda Escuro */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Estrutura do Cabeçalho do Professor */
+.teacher-header {
+    background: linear-gradient(135deg, #2c3e50, #1a252f);
+    color: var(--white);
+    padding: 40px 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.teacher-photo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 4px solid var(--white);
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.teacher-info h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.teacher-info p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    opacity: 0.9;
+}
+
+/* Área de Conteúdo Principal */
+.main-content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+/* Containers das Séries */
+.serie-container {
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-left: 10px solid #ccc;
+    transition: transform 0.2s;
+}
+
+.serie-container:hover .serie-title {
+    color: var(--white);
+    border-bottom-color: rgba(255, 255, 255, 0.2); /* Deixa a linha divisória sutil no fundo escuro */
+}
+
+.serie-title {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #eee;
+}
+
+/* Grid de Temas (10 Botões por Série) */
+.themes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 15px;
+}
+
+.theme-button {
+    background-color: var(--white);
+    border: 2px solid;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.2s ease;
+}
+
+.theme-button:hover {
+    color: var(--white);
+}
+
+/* Mapeamento Visual de Cores */
+.color-6ano { border-color: var(--color-6ano); color: var(--color-6ano); }
+.color-6ano:hover { background-color: var(--color-6ano); }
+.serie-container.color-6ano { border-left-color: var(--color-6ano); }
+
+.color-7ano { border-color: var(--color-7ano); color: var(--color-7ano); }
+.color-7ano:hover { background-color: var(--color-7ano); }
+.serie-container.color-7ano { border-left-color: var(--color-7ano); }
+
+.color-8ano { border-color: var(--color-8ano); color: var(--color-8ano); }
+.color-8ano:hover { background-color: var(--color-8ano); }
+.serie-container.color-8ano { border-left-color: var(--color-8ano); }
+
+.color-9ano { border-color: var(--color-9ano); color: var(--color-9ano); }
+.color-9ano:hover { background-color: var(--color-9ano); }
+.serie-container.color-9ano { border-left-color: var(--color-9ano); }
+
+.color-1em { border-color: var(--color-1em); color: var(--color-1em); }
+.color-1em:hover { background-color: var(--color-1em); }
+.serie-container.color-1em { border-left-color: var(--color-1em); }
+
+.color-2em { border-color: var(--color-2em); color: var(--color-2em); }
+.color-2em:hover { background-color: var(--color-2em); }
+.serie-container.color-2em { border-left-color: var(--color-2em); }
+
+.color-3em { border-color: var(--color-3em); color: var(--color-3em); }
+.color-3em:hover { background-color: var(--color-3em); }
+.serie-container.color-3em { border-left-color: var(--color-3em); }
+
+/* Sistema Janela Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    backdrop-filter: blur(4px);
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 900px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.close-button {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #aaa;
+    transition: color 0.2s;
+}
+
+.close-button:hover { color: #333; }
+
+#modal-title {
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #eee;
+    font-size: 1.6rem;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Responsividade de Vídeo 16:9 */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #000;
+    margin-top: 10px;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Grid de Exercícios em PDF */
+.activities-list {
+    list-style: none;
+    margin-top: 12px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 10px;
+}
+
+.activities-list li a {
+    display: block;
+    background-color: #f8f9fa;
+    padding: 10px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+    border-left: 4px solid #cbd5e1;
+    transition: all 0.2s;
+}
+
+.activities-list li a:hover {
+    background-color: #edf2f7;
+    border-left-color: #2c3e50;
+    transform: translateX(3px);
+}
+
+/* Ajuste Responsivo para Dispositivos Móveis */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
