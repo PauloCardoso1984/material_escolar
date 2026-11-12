@@ -13,7 +13,7 @@ const dadosEscolares = [
     { 
         id: "8ano", 
         nome: "8º Ano do Ensino Fundamental", 
-        temas: ["Potenciação e Radiciação", "Notação Científica", "Expressões Algébricas", "Monômios e Polinômios", "Produtos Notáveis", "Sistemas de Equações", "Triângulos e Quadriláteros", "Transformações Geométricas", "Pesquisa Estatística e Amostragem", "Princípio Multiplicativo de Contagem"] 
+        temas: ["Potenciação e Radiciação", "Notação Científica", "Expressões Algébricas", "Monômios e Polinômios", "Produtos Notáveis", "Sistemas de Equações", "Triângulos e Quadriláteros (Perímetro e Área)", "Transformações Geométricas", "Estatística (Média, Mediana e Moda)", "Princípio Multiplicativo de Contagem"] 
     },
     { 
         id: "9ano", 
@@ -42,7 +42,17 @@ const dadosEscolares = [
 const linksDosVideos = {
     "Sistema de Numeração": "videos/SISTEMA DE NUMERACAO DECIMAL.mp4",
     "Operações Básicas": "videos/OPERACOES_BASICAS.mp4",
-    "Potenciação e Radiciação": "https://youtube-nocookie.com" // Link atualizado em formato embed para o player modal funcionar
+
+//================== 8a série ========================
+    "Potenciação e Radiciação": "videos/POTENCIACAO_RADICIACAO.mp4",
+    "Notação Científica" : "videos/NOTACAO_CIENTIFICA.mp4",
+    "Expressões Algébricas" : "videos/EXPRESSOES_ALGEBRICAS.mp4",
+    "Produtos Notáveis": "videos/PRODUTOS_NOTAVEIS.mp4",
+    "Sistemas de Equações": "videos/SISTEMA _DE_EQUACAO.mp4", 
+    "Triângulos e Quadriláteros (Perímetro e Área)": "videos/TRIANGULO_QUADRILATERO.mp4",
+    "Transformações Geométricas": "videos/TRANSFORMACOES_GEOMETRICAS.mp4", 
+    "Estatística (Média, Mediana e Moda)": "videos/ESTATISTICA.mp4",
+    
 };
 
 // Inicialização segura após montagem do DOM
@@ -117,6 +127,136 @@ document.addEventListener("DOMContentLoaded", () => {
                 // 7º Ano - Tema 1 (Números Inteiros) - Atividade 1
                 a.href = `pdfs/${serieId}/tema${numeroTema}/NI_Atividade_1.pdf`;
                 
+                // 8a série ===================================================             
+            } else if (serieId === "8ano" && numeroTema === 1 && i === 1) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/PR_Atividade_1.pdf`;
+            
+            } else if (serieId === "8ano" && numeroTema === 1 && i === 2) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/PR_Atividade_2.pdf`;
+            
+            } else if (serieId === "8ano" && numeroTema === 1 && i === 3) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/PR_Atividade_3.pdf`;
+                          
+            } else if (serieId === "8ano" && numeroTema === 1 && i === 4) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/PR_Atividade_4.pdf`;
+                          
+            } else if (serieId === "8ano" && numeroTema === 1 && i === 5) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/PR_Atividade_5.pdf`;
+
+                // EXPRESSÕES ALGÉBRICAS //         
+            } else if (serieId === "8ano" && numeroTema === 3 && i === 1) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/EA_Atividade_1.pdf`;
+            
+            } else if (serieId === "8ano" && numeroTema === 3 && i === 2) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/EA_Atividade_2.pdf`;
+            
+            } else if (serieId === "8ano" && numeroTema === 3 && i === 3) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/EA_Atividade_3.pdf`;
+            
+            } else if (serieId === "8ano" && numeroTema === 3 && i === 4) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/EA_Atividade_4.pdf`;
+                             
+            } else if (serieId === "8ano" && numeroTema === 3 && i === 5) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/EA_Atividade_5.pdf`;
+                             
+            } else if (serieId === "8ano" && numeroTema === 3 && i === 6) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/EA_Atividade_6.pdf`;
+                             
+            } else if (serieId === "8ano" && numeroTema === 3 && i === 7) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/EA_Atividade_7.pdf`;
+                 
+                    // PRODUTOS NOTÁVEIS //
+            } else if (serieId === "8ano" && numeroTema === 5 && i === 1) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/PN_Atividade_1.pdf`;
+                             
+            } else if (serieId === "8ano" && numeroTema === 5 && i === 2) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/PN_Atividade_2.pdf`;
+                             
+            } else if (serieId === "8ano" && numeroTema === 5 && i === 3) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/PN_Atividade_3.pdf`;
+                             
+            } else if (serieId === "8ano" && numeroTema === 5 && i === 4) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/PN_Atividade_4.pdf`;
+                             
+            } else if (serieId === "8ano" && numeroTema === 5 && i === 5) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/PN_Atividade_5.pdf`;
+                 
+                
+                // SISTEMA DE EQUAÇÕES //           
+            } else if (serieId === "8ano" && numeroTema === 6 && i === 1) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/SI_Atividade_3.pdf`;
+                 
+            } else if (serieId === "8ano" && numeroTema === 6 && i === 2) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/SI_Atividade_4.pdf`;
+                 
+            } else if (serieId === "8ano" && numeroTema === 6 && i === 3) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/SI_Atividade_5.pdf`;
+                 
+            } else if (serieId === "8ano" && numeroTema === 6 && i === 4) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/SI_Atividade_6.pdf`;
+                        
+            } else if (serieId === "8ano" && numeroTema === 6 && i === 5) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/SI_Atividade_7.pdf`;
+                             
+            } else if (serieId === "8ano" && numeroTema === 6 && i === 6) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/SI_Atividade_8.pdf`;
+                             
+            } else if (serieId === "8ano" && numeroTema === 6 && i === 7) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/SI_Atividade_8.pdf`;
+                            
+            } else if (serieId === "8ano" && numeroTema === 6 && i === 8) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/SI_Atividade_8.pdf`;
+                 
+                // TRIÂNGULO E QUADRILATERO [PERÍMETRO E ÁREA]
+            } else if (serieId === "8ano" && numeroTema === 7 && i === 1) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/TQ_Atividade_1.pdf`;
+                        
+            } else if (serieId === "8ano" && numeroTema === 7 && i === 2) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/TQ_Atividade_2.pdf`;
+                            
+            } else if (serieId === "8ano" && numeroTema === 7 && i === 3) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/TQ_Atividade_3.pdf`;
+                            
+            } else if (serieId === "8ano" && numeroTema === 7 && i === 4) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/TQ_Atividade_4.pdf`;
+                            
+            } else if (serieId === "8ano" && numeroTema === 7 && i === 5) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/TQ_Atividade_5.pdf`;
+                            
+            } else if (serieId === "8ano" && numeroTema === 7 && i === 6) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/TQ_Atividade_6.pdf`;
+
+                //ESTATÍSTICA //
+            } else if (serieId === "8ano" && numeroTema === 9 && i === 1) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/EST_Atividade_1.pdf`;
+            
+            } else if (serieId === "8ano" && numeroTema === 9 && i === 2) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/EST_Atividade_2.pdf`;
+                            
+            } else if (serieId === "8ano" && numeroTema === 9 && i === 3) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/EST_Atividade_3.pdf`;
+                            
+            } else if (serieId === "8ano" && numeroTema === 9 && i === 4) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/EST_Atividade_4.pdf`;
+                            
+            } else if (serieId === "8ano" && numeroTema === 9 && i === 5) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/EST_Atividade_5.pdf`;
+                            
+            } else if (serieId === "8ano" && numeroTema === 9 && i === 6) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/EST_Atividade_6.pdf`;
+                            
+            } else if (serieId === "8ano" && numeroTema === 9 && i === 7) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/EST_Atividade_7.pdf`;
+                            
+            } else if (serieId === "8ano" && numeroTema === 9 && i === 8) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/EST_Atividade_8.pdf`;
+                            
+            } else if (serieId === "8ano" && numeroTema === 9 && i === 9) {
+                a.href = `pdfs/${serieId}/tema${numeroTema}/EST_Atividade_9.pdf`;
+
+
+
+
             } else {
                 // Todos os outros arquivos seguem o padrão automatizado
                 a.href = `pdfs/${serieId}/tema${numeroTema}/atividade${i}.pdf`;
